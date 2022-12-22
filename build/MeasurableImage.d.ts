@@ -15,8 +15,10 @@ export declare class MeasurableImage {
     readonly node: HTMLElement | HTMLImageElement;
     private getURLCallback;
     /**
-     * @param  node   -  The DOM Element that contains the image.
-     * @param  getURL -  A function that takes in the node and returns the URL of the image.
+     * Constructor.
+     *
+     * @param {HTMLElement | HTMLImageElement} node -  The DOM Element that contains the image.
+     * @param {SourceCallbackFn} getURL             -  A function that takes in the node and returns the URL of the image.
      */
     constructor(node: HTMLElement | HTMLImageElement, getURL: SourceCallbackFn);
     getURL(): string;
@@ -34,7 +36,8 @@ export declare class MeasurableImage {
      * To get the expected size of the image,
      * the image size on page has to be multiplied by the device pixel ratio.
      *
-     * @param  sizeOnPage -  The size of the image on the page.
+     * @param {Dimensions} sizeOnPage - The size of the image on the page.
+     * @returns {Object} - The expected size of the image.
      */
     getExpectedSize(sizeOnPage: Dimensions): {
         width: number;
@@ -45,14 +48,14 @@ export declare class MeasurableImage {
      * Fetches the weight of the image at the given URL,
      * by reading the Content-Length header.
      *
-     * @param  url -  string The URL of the image.
+     * @param {string} url -  string The URL of the image.
      */
     private fetchFileWeight;
     /**
      * Fetches the dimensions of the image at the given URL,
      * This creates a new image element and loads the image.
      *
-     * @param  url -  image url
+     * @param {string} url -  image url
      */
     private fetchFileDimensions;
 }

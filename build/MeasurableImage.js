@@ -7,8 +7,10 @@ export class MeasurableImage {
     node;
     getURLCallback;
     /**
-     * @param  node   -  The DOM Element that contains the image.
-     * @param  getURL -  A function that takes in the node and returns the URL of the image.
+     * Constructor.
+     *
+     * @param {HTMLElement | HTMLImageElement} node -  The DOM Element that contains the image.
+     * @param {SourceCallbackFn} getURL             -  A function that takes in the node and returns the URL of the image.
      */
     constructor(node, getURL) {
         this.node = node;
@@ -46,7 +48,8 @@ export class MeasurableImage {
      * To get the expected size of the image,
      * the image size on page has to be multiplied by the device pixel ratio.
      *
-     * @param  sizeOnPage -  The size of the image on the page.
+     * @param {Dimensions} sizeOnPage - The size of the image on the page.
+     * @returns {Object} - The expected size of the image.
      */
     getExpectedSize(sizeOnPage) {
         const dpr = window.devicePixelRatio || 1;
@@ -63,7 +66,7 @@ export class MeasurableImage {
      * Fetches the weight of the image at the given URL,
      * by reading the Content-Length header.
      *
-     * @param  url -  string The URL of the image.
+     * @param {string} url -  string The URL of the image.
      */
     async fetchFileWeight(url) {
         const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
@@ -82,7 +85,7 @@ export class MeasurableImage {
      * Fetches the dimensions of the image at the given URL,
      * This creates a new image element and loads the image.
      *
-     * @param  url -  image url
+     * @param {string} url -  image url
      */
     async fetchFileDimensions(url) {
         const img = new Image();
