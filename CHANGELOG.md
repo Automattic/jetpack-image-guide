@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Fixed an issue that would break the release process
+
 ### Fixed
 - Adding prepare script back to package.json, was needed for an ESlint test
 
