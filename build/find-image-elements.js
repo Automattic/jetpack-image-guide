@@ -44,6 +44,7 @@ export function backgroundImageSource(node) {
     if (url && url[1] && imageLikeURL(url[1])) {
         return url[1];
     }
+    return null;
 }
 /**
  * Create MeasurableImage objects from a list of nodes

@@ -49,7 +49,7 @@ export class MeasurableImage {
      * the image size on page has to be multiplied by the device pixel ratio.
      *
      * @param {Dimensions} sizeOnPage - The size of the image on the page.
-     * @returns {Object} - The expected size of the image.
+     * @returns {object} - The expected size of the image.
      */
     getExpectedSize(sizeOnPage) {
         const dpr = window.devicePixelRatio || 1;
