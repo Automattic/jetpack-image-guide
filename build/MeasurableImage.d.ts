@@ -1,9 +1,9 @@
-export declare type SourceCallbackFn = (node: HTMLElement) => string | null;
-export declare type Dimensions = {
+export type SourceCallbackFn = (node: HTMLElement) => string | null;
+export type Dimensions = {
     width: number;
     height: number;
 };
-export declare type Weight = {
+export type Weight = {
     weight: number;
 };
 /**
