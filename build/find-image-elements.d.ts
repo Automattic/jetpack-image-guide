@@ -25,6 +25,7 @@ export declare function backgroundImageSource(node: HTMLElement): string;
  * and remove any nodes that can't be measured.
  *
  * @param {Element[]} domNodes - A list of nodes to measure
+ * @param {(input: string, init?: Array) => Promise<Response>} fetchFn -  A function that fetches a URL and returns a Promise.
  * @returns {MeasurableImage[]} - A list of MeasurableImage objects.
  */
-export declare function getMeasurableImages(domNodes: Element[]): MeasurableImage[];
+export declare function getMeasurableImages(domNodes: Element[], fetchFn?: typeof fetch): MeasurableImage[];

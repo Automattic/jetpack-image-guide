@@ -6,6 +6,7 @@ export type Dimensions = {
 export type Weight = {
     weight: number;
 };
+type FetchFn = (input: URL | RequestInfo, init?: RequestInit) => Promise<Response>;
 /**
  * A class that represents a DOM Element that
  * has an image that should be measured and
@@ -14,13 +15,15 @@ export type Weight = {
 export declare class MeasurableImage {
     readonly node: HTMLElement | HTMLImageElement;
     private getURLCallback;
+    fetch: ((input: URL | RequestInfo, init?: RequestInit) => Promise<Response>) & typeof fetch;
     /**
      * Constructor.
      *
      * @param {HTMLElement | HTMLImageElement} node -  The DOM Element that contains the image.
      * @param {SourceCallbackFn} getURL             -  A function that takes in the node and returns the URL of the image.
+     * @param {FetchFn} fetchFn                     -  A function that fetches a URL and returns a Promise.
      */
-    constructor(node: HTMLElement | HTMLImageElement, getURL: SourceCallbackFn);
+    constructor(node: HTMLElement | HTMLImageElement, getURL: SourceCallbackFn, fetchFn?: FetchFn);
     getURL(): string;
     getSizeOnPage(): {
         width: number;
@@ -59,3 +62,4 @@ export declare class MeasurableImage {
      */
     private fetchFileDimensions;
 }
+export {};
