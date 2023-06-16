@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Jetpack Boost: add a proxy to Image Guide so it can load remote images.
 
+### Fixed
+- Improved image url validation for background image source.
+
 ## 0.3.0 - 2023-05-11
 ### Changed
 - Set `exports` in package.json. This will break directly requiring files from within the package in environments that respect `exports`. [#30313]
