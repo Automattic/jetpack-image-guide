@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Boost: add a proxy to Image Guide so it can load remote images.
 
 ### Fixed
+- Check response.url, not response.ok to verify a response worked
 - Improved image url validation for background image source.
 
 ## 0.3.0 - 2023-05-11
