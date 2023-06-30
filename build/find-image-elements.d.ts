@@ -1,4 +1,4 @@
-import { MeasurableImage } from './MeasurableImage';
+import { FetchFn, MeasurableImage } from './MeasurableImage';
 /**
  * Get elements that either are image tags or have a background image.
  *
@@ -28,4 +28,4 @@ export declare function backgroundImageSource(node: HTMLElement): string;
  * @param {(input: string, init?: Array) => Promise<Response>} fetchFn -  A function that fetches a URL and returns a Promise.
  * @returns {MeasurableImage[]} - A list of MeasurableImage objects.
  */
-export declare function getMeasurableImages(domNodes: Element[], fetchFn?: typeof fetch): MeasurableImage[];
+export declare function getMeasurableImages(domNodes: Element[], fetchFn?: FetchFn | null): Promise<MeasurableImage[]>;

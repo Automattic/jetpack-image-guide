@@ -6,7 +6,7 @@ export type Dimensions = {
 export type Weight = {
     weight: number;
 };
-type FetchFn = (input: URL | RequestInfo, init?: RequestInit) => Promise<Response>;
+export type FetchFn = (input: URL | RequestInfo, init?: RequestInit) => Promise<Response>;
 /**
  * A class that represents a DOM Element that
  * has an image that should be measured and
@@ -15,7 +15,7 @@ type FetchFn = (input: URL | RequestInfo, init?: RequestInit) => Promise<Respons
 export declare class MeasurableImage {
     readonly node: HTMLElement | HTMLImageElement;
     private getURLCallback;
-    fetch: ((input: URL | RequestInfo, init?: RequestInit) => Promise<Response>) & typeof fetch;
+    fetch: FetchFn;
     /**
      * Constructor.
      *
@@ -23,7 +23,7 @@ export declare class MeasurableImage {
      * @param {SourceCallbackFn} getURL             -  A function that takes in the node and returns the URL of the image.
      * @param {FetchFn} fetchFn                     -  A function that fetches a URL and returns a Promise.
      */
-    constructor(node: HTMLElement | HTMLImageElement, getURL: SourceCallbackFn, fetchFn?: FetchFn);
+    constructor(node: HTMLElement | HTMLImageElement, getURL: SourceCallbackFn, fetchFn?: FetchFn | null);
     getURL(): string;
     getSizeOnPage(): {
         width: number;
@@ -61,5 +61,10 @@ export declare class MeasurableImage {
      * @param {string} url -  image url
      */
     private fetchFileDimensions;
+    /**
+     * Checks if the image is too small and should be ignored
+     *
+     * @returns {boolean} - if the image is smaller than 65 pixels width and height return false
+     */
+    isImageBig(): Promise<boolean>;
 }
-export {};
