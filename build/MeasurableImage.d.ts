@@ -62,9 +62,10 @@ export declare class MeasurableImage {
      */
     private fetchFileDimensions;
     /**
-     * Checks if the image is too small and should be ignored
+     * Checks if the image is too small and should be ignored. Will return false on images
+     * that don't load at all - we can't establish they're tiny!
      *
-     * @returns {boolean} - if the image is smaller than 65 pixels width and height return false
+     * @returns {boolean} - if the image is smaller than 65 pixels width and height return true
      */
-    isImageBig(): Promise<boolean>;
+    isImageTiny(): Promise<boolean>;
 }

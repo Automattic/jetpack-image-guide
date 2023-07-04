@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Boost: exclude small images from Image Size Analysis
 
+### Changed
+- Return an error when an image is missing, instead of -1 by -1 dimensions.
+
 ### Fixed
 - Check response.url, not response.ok to verify a response worked
 
