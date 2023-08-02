@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Updated package dependencies.
+- Update tiny image check to treat images who's dimentions are missing as tiny.
 
 ## [0.5.1] - 2023-07-11
 ### Fixed
