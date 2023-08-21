@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update tiny image check to treat images who's dimentions are missing as tiny.
 
+### Fixed
+- Handle zero dimensions in getOversizedRatio
+
 ## [0.5.1] - 2023-07-11
 ### Fixed
 - Image Guide: Fix for broken background-images causing the image guide not to load [#31792]
