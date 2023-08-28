@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update tiny image check to treat images who's dimentions are missing as tiny.
 
+### Removed
+- Remove unnecessary files from mirror repo and published package.
+
 ### Fixed
 - Handle zero dimensions in getOversizedRatio
 
