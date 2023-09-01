@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.5.2] - 2023-09-01
 ### Changed
-- Updated package dependencies.
-- Update tiny image check to treat images who's dimentions are missing as tiny.
+- Updated package dependencies. [#31815] [#32605]
+- Update tiny image check to treat images who's dimentions are missing as tiny. [#32144]
 
 ### Removed
-- Remove unnecessary files from mirror repo and published package.
+- Remove unnecessary files from mirror repo and published package. [#32674]
 
 ### Fixed
-- Handle zero dimensions in getOversizedRatio
+- Handle zero dimensions in getOversizedRatio [#32548]
 
 ## [0.5.1] - 2023-07-11
 ### Fixed
@@ -77,7 +74,7 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minor package.json change - removing private entry.
 
-[0.5.2-alpha]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.1...v0.5.2-alpha
+[0.5.2]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/Automattic/jetpack-image-guide/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-image-guide/compare/v0.3.0...v0.4.0
