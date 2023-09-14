@@ -52,6 +52,7 @@ export declare class MeasurableImage {
      * by reading the Content-Length header.
      *
      * @param {string} url -  string The URL of the image.
+     * @returns {number} Weight.
      */
     private fetchFileWeight;
     /**
@@ -59,6 +60,7 @@ export declare class MeasurableImage {
      * This creates a new image element and loads the image.
      *
      * @param {string} url -  image url
+     * @returns {object} dimensions File dimensions.
      */
     private fetchFileDimensions;
     /**
