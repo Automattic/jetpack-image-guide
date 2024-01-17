@@ -6,7 +6,7 @@ export type Dimensions = {
 export type Weight = {
     weight: number;
 };
-export type FetchFn = (input: URL | RequestInfo, init?: RequestInit) => Promise<Response>;
+export type FetchFn = (url: string) => Promise<Response>;
 /**
  * A class that represents a DOM Element that
  * has an image that should be measured and
@@ -19,9 +19,9 @@ export declare class MeasurableImage {
     /**
      * Constructor.
      *
-     * @param {HTMLElement | HTMLImageElement} node -  The DOM Element that contains the image.
-     * @param {SourceCallbackFn} getURL             -  A function that takes in the node and returns the URL of the image.
-     * @param {FetchFn} fetchFn                     -  A function that fetches a URL and returns a Promise.
+     * @param {HTMLElement | HTMLImageElement} node    - The DOM Element that contains the image.
+     * @param {SourceCallbackFn}               getURL  - A function that takes in the node and returns the URL of the image.
+     * @param {FetchFn}                        fetchFn - A function that fetches a URL and returns a Promise.
      */
     constructor(node: HTMLElement | HTMLImageElement, getURL: SourceCallbackFn, fetchFn?: FetchFn | null);
     getURL(): string;
@@ -40,7 +40,7 @@ export declare class MeasurableImage {
      * the image size on page has to be multiplied by the device pixel ratio.
      *
      * @param {Dimensions} sizeOnPage - The size of the image on the page.
-     * @returns {object} - The expected size of the image.
+     * @return {object} - The expected size of the image.
      */
     getExpectedSize(sizeOnPage: Dimensions): {
         width: number;
@@ -51,23 +51,23 @@ export declare class MeasurableImage {
      * Fetches the weight of the image at the given URL,
      * by reading the Content-Length header.
      *
-     * @param {string} url -  string The URL of the image.
-     * @returns {number} Weight.
+     * @param {string} url - string The URL of the image.
+     * @return {number} Weight.
      */
     private fetchFileWeight;
     /**
      * Fetches the dimensions of the image at the given URL,
      * This creates a new image element and loads the image.
      *
-     * @param {string} url -  image url
-     * @returns {object} dimensions File dimensions.
+     * @param {string} url - image url
+     * @return {object} dimensions File dimensions.
      */
     private fetchFileDimensions;
     /**
      * Checks if the image is too small and should be ignored. Will return true on images
      * that don't load at all - we can't establish they're tiny!
      *
-     * @returns {boolean} - if the image is smaller than 65 pixels width and height return true
+     * @return {boolean} - if the image is smaller than 65 pixels width and height return true
      */
     isImageTiny(): Promise<boolean>;
 }
