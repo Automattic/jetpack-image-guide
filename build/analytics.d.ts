@@ -1,4 +1,4 @@
-import { MeasurableImageStore } from './stores/MeasurableImageStore';
+import { MeasurableImageStore } from './stores/MeasurableImageStore.js';
 /**
  * Image properties sent to tracks.
  */

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Make build usable in projects using tsc with `moduleResolution` set to 'nodenext'.
+
 ### Fixed
 - Fix image name causing image to go outside details panel.
 

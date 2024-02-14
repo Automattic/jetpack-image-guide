@@ -1,5 +1,5 @@
-import { MeasurableImageStore } from './stores/MeasurableImageStore';
-import type { FetchFn, MeasurableImage } from './MeasurableImage';
+import { MeasurableImageStore } from './stores/MeasurableImageStore.js';
+import type { FetchFn, MeasurableImage } from './MeasurableImage.js';
 /**
  * Set up a listener to initialize stuff on window load.
  *

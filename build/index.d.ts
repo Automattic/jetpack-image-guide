@@ -1,6 +1,6 @@
-import { Dimensions, FetchFn, MeasurableImage, Weight } from './MeasurableImage';
-import { TracksCallback } from './analytics';
-import { getMeasurableImages } from './find-image-elements';
+import { Dimensions, FetchFn, MeasurableImage, Weight } from './MeasurableImage.js';
+import { TracksCallback } from './analytics.js';
+import { getMeasurableImages } from './find-image-elements.js';
 import AdminBarToggle from './ui/AdminBarToggle.svelte';
 export { MeasurableImage, getMeasurableImages };
 export type { Weight, Dimensions };
