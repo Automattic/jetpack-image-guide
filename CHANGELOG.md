@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Make build usable in projects using tsc with `moduleResolution` set to 'nodenext'.
+- Updated targets in build configuration to better match supported browsers.
 
 ### Fixed
 - Fix image name causing image to go outside details panel.
