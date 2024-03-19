@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Updated package dependencies.
+
 ## [0.5.7] - 2024-03-15
 ### Changed
 - Updated package dependencies. [#36142]
@@ -100,6 +107,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Minor package.json change - removing private entry.
 
+[0.5.8-alpha]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.7...v0.5.8-alpha
 [0.5.7]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.6...v0.5.7
 [0.5.6]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.5...v0.5.6
 [0.5.5]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.4...v0.5.5
