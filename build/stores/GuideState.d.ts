@@ -1,4 +1,5 @@
-import { Writable } from 'svelte/store';
+/// <reference types="svelte" />
+import { type Writable } from 'svelte/store';
 declare const store: {
     readonly active: "Active";
     readonly paused: "Paused";

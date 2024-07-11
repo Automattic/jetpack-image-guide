@@ -19,4 +19,7 @@ type ImageGuideUIOptions = {
  * @param {Function} args.fetchFunction  - The function to use to fetch the image weight.
  * @return {object} The Svelte component instance.
  */
-export declare function setupImageGuideUI(target: HTMLElement, { href, tracksCallback, fetchFunction }: ImageGuideUIOptions): AdminBarToggle;
+export declare function setupImageGuideUI(target: HTMLElement, { href, tracksCallback, fetchFunction }: ImageGuideUIOptions): AdminBarToggle<{
+    href: string;
+    tracksCallback: TracksCallback;
+}, any, any>;

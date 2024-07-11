@@ -1,4 +1,4 @@
-import { Writable, Readable } from 'svelte/store';
+import { type Writable, type Readable } from 'svelte/store';
 import { MeasurableImage } from '../MeasurableImage.js';
 import type { Dimensions, Weight } from '../MeasurableImage.js';
 /**
