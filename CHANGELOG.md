@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 
 ### Fixed
+- Fix: Handle uncaught exception for images with empty or no src attributes.
 - Fixed a bug where image guide would show up for svg images.
 
 ## [0.5.10] - 2024-07-10
