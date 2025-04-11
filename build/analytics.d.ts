@@ -5,7 +5,6 @@ import { MeasurableImageStore } from './stores/MeasurableImageStore.ts';
 type ImageProperties = {
     severity: 'red' | 'yellow' | 'green';
     oversized_ratio: number;
-    file_weight: number;
     file_width: number;
     file_height: number;
     size_on_page_width: number;

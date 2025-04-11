@@ -32,9 +32,9 @@ export declare class MeasurableImage {
     getFileSize(url: string): Promise<{
         width: number;
         height: number;
-        weight: number;
     }>;
-    getPotentialSavings(fileSize: Dimensions & Weight, sizeOnPage: Dimensions): number;
+    getWeight(url: string): Promise<number>;
+    getPotentialSavings(fileSize: Dimensions, fileWeight: Weight, sizeOnPage: Dimensions): number;
     /**
      * To get the expected size of the image,
      * the image size on page has to be multiplied by the device pixel ratio.

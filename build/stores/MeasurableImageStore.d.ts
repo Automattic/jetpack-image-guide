@@ -10,7 +10,8 @@ import type { Dimensions, Weight } from '../MeasurableImage.ts';
  * accessible in the components.
  */
 export declare class MeasurableImageStore {
-    readonly fileSize: Writable<Dimensions & Weight>;
+    readonly fileSize: Writable<Dimensions>;
+    readonly fileWeight: Writable<Weight>;
     readonly sizeOnPage: Writable<Dimensions>;
     readonly potentialSavings: Readable<number | null>;
     readonly expectedSize: Readable<Dimensions>;
@@ -19,11 +20,13 @@ export declare class MeasurableImageStore {
     readonly loading: Writable<boolean>;
     readonly image: MeasurableImage;
     readonly node: MeasurableImage['node'];
+    private weightMap;
     private currentSrc;
     constructor(measurableImage: MeasurableImage);
     private deriveOversizedRatio;
     private deriveExpectedSize;
     private derivePotentialSavings;
     updateDimensions(): Promise<void>;
+    private updateFileDimensions;
     private maybeUpdateWeight;
 }
