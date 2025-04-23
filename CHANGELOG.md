@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Linting: Fix more Stylelint violations.
+
 ## [0.6.0] - 2025-04-16
 ### Changed
 - Adjust relative imports in TypeScript sources to use correct extensions after enabling TypeScript's new `rewriteRelativeImportExtensions` option. The built JS should be unaffected, so this is not a breaking change. [#42990]
@@ -165,6 +172,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Minor package.json change - removing private entry.
 
+[0.6.1-alpha]: https://github.com/Automattic/jetpack-image-guide/compare/v0.6.0...v0.6.1-alpha
 [0.6.0]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.20...v0.6.0
 [0.5.20]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.19...v0.5.20
 [0.5.19]: https://github.com/Automattic/jetpack-image-guide/compare/v0.5.18...v0.5.19
