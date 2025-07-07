@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build with new React JSX transform.
+- Update package dependencies.
 
 ## [1.0.2] - 2025-06-23
 ### Fixed
