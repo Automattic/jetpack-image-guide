@@ -1,0 +1,59 @@
+export type SourceCallbackFn = (node: HTMLElement) => string | null;
+export type Dimensions = {
+    width: number;
+    height: number;
+};
+export type Weight = {
+    weight: number;
+};
+export type FetchFn = (url: string) => Promise<Response>;
+/**
+ * A class that represents a DOM Element that
+ * has an image that should be measured and
+ * provides measurement utilities.
+ */
+export declare class MeasurableImage {
+    readonly node: HTMLElement | HTMLImageElement;
+    private getURLCallback;
+    fetch: FetchFn;
+    /**
+     * Constructor.
+     *
+     * @param {HTMLElement | HTMLImageElement} node    - The DOM Element that contains the image.
+     * @param {SourceCallbackFn}               getURL  - A function that takes in the node and returns the URL of the image.
+     * @param {FetchFn}                        fetchFn - A function that fetches a URL and returns a Promise.
+     */
+    constructor(node: HTMLElement | HTMLImageElement, getURL: SourceCallbackFn, fetchFn?: FetchFn | null);
+    getURL(): string;
+    getSizeOnPage(): {
+        width: number;
+        height: number;
+    };
+    getFileSize(url: string): Promise<{
+        width: number;
+        height: number;
+    }>;
+    getWeight(url: string): Promise<number>;
+    getPotentialSavings(fileSize: Dimensions, fileWeight: Weight, sizeOnPage: Dimensions): number;
+    /**
+     * To get the expected size of the image,
+     * the image size on page has to be multiplied by the device pixel ratio.
+     *
+     * @param {Dimensions} sizeOnPage - The size of the image on the page.
+     * @return {object} - The expected size of the image.
+     */
+    getExpectedSize(sizeOnPage: Dimensions): {
+        width: number;
+        height: number;
+    };
+    getOversizedRatio(fileSize: Dimensions, sizeOnPage: Dimensions): number;
+    private fetchFileWeight;
+    private fetchFileDimensions;
+    /**
+     * Checks if the image is too small and should be ignored. Will return true on images
+     * that don't load at all - we can't establish they're tiny!
+     *
+     * @return {boolean} - if the image is smaller than 65 pixels width and height return true
+     */
+    isImageTiny(): Promise<boolean>;
+}
