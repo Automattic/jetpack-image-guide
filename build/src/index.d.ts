@@ -1,7 +1,6 @@
 import { MeasurableImage, type Dimensions, type FetchFn, type Weight } from './MeasurableImage.ts';
 import { type TracksCallback } from './analytics.ts';
 import { getMeasurableImages } from './find-image-elements.ts';
-import AdminBarToggle from './ui/AdminBarToggle.svelte';
 export { MeasurableImage, getMeasurableImages };
 export type { Weight, Dimensions };
 type ImageGuideUIOptions = {
@@ -19,7 +18,7 @@ type ImageGuideUIOptions = {
  * @param {Function} args.fetchFunction  - The function to use to fetch the image weight.
  * @return {object} The Svelte component instance.
  */
-export declare function setupImageGuideUI(target: HTMLElement, { href, tracksCallback, fetchFunction }: ImageGuideUIOptions): AdminBarToggle<{
-    href: string;
-    tracksCallback: TracksCallback;
-}, any, any>;
+export declare function setupImageGuideUI(target: HTMLElement, { href, tracksCallback, fetchFunction }: ImageGuideUIOptions): {
+    $on?(type: string, callback: (e: any) => void): () => void;
+    $set?(props: Partial<Record<string, any>>): void;
+} & Record<string, any>;
