@@ -1,7 +1,7 @@
 import { type Writable } from 'svelte/store';
 declare const store: {
-    readonly active: "Active";
-    readonly paused: "Paused";
+    readonly active: 'Active';
+    readonly paused: 'Paused';
 };
 type State = keyof typeof store;
 type CyclableStore = Writable<State> & {

@@ -47,7 +47,21 @@ export declare class MeasurableImage {
         height: number;
     };
     getOversizedRatio(fileSize: Dimensions, sizeOnPage: Dimensions): number;
+    /**
+     * Fetches the weight of the image at the given URL,
+     * by reading the Content-Length header.
+     *
+     * @param {string} url - string The URL of the image.
+     * @return {number} Weight.
+     */
     private fetchFileWeight;
+    /**
+     * Fetches the dimensions of the image at the given URL,
+     * This creates a new image element and loads the image.
+     *
+     * @param {string} url - image url
+     * @return {object} dimensions File dimensions.
+     */
     private fetchFileDimensions;
     /**
      * Checks if the image is too small and should be ignored. Will return true on images
