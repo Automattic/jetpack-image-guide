@@ -1,12 +1,7 @@
-import { type Writable } from 'svelte/store';
-declare const store: {
-    readonly active: "Active";
-    readonly paused: "Paused";
+export declare const guideState: {
+    cycle: () => unknown;
+    subscribe: (callback: (value: "active" | "paused") => void, invalidate?: () => void) => () => void;
+    set: (value: "active" | "paused") => void;
+    update: (updater: (value: "active" | "paused") => "active" | "paused") => void;
 };
-type State = keyof typeof store;
-type CyclableStore = Writable<State> & {
-    cycle: () => void;
-};
-export declare const guideState: CyclableStore;
-export declare const guideLabel: import("svelte/store").Readable<"Active" | "Paused">;
-export {};
+export declare const guideLabel: import("./facade.ts").Readable<string>;
