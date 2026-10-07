@@ -1,7 +1,7 @@
 import { type Writable, type Readable } from './facade.ts';
 import { MeasurableImage } from '../MeasurableImage.ts';
 import type { Dimensions, Weight } from '../MeasurableImage.ts';
-/** Own per-image measurements, source tracking and the weight cache outside reducer state. */
+/** Keep image nodes, source tracking and the weight cache outside reducer state. */
 export declare class MeasurableImageStore {
     readonly fileSize: Writable<Dimensions>;
     readonly fileWeight: Writable<Weight>;
@@ -17,6 +17,7 @@ export declare class MeasurableImageStore {
     readonly node: MeasurableImage['node'];
     private weightMap;
     private currentSrc;
+    private consumers;
     constructor(measurableImage: MeasurableImage);
     private fact;
     /** Read current image facts and derived measurements without activating fetching. */
@@ -30,8 +31,8 @@ export declare class MeasurableImageStore {
         oversizedRatio: number;
         potentialSavings: number;
     };
-    /** Fetch the current source's weight when a measurement consumer becomes active. */
-    activate(): void;
+    /** Acquire weight measurements until the returned idempotent release is called. */
+    acquire(): () => void;
     updateDimensions(): Promise<void>;
     private updateFileDimensions;
     private maybeUpdateWeight;
