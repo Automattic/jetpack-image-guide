@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add @wordpress/data dependency and React peer dependencies.
 - Update package dependencies.
 
+### Fixed
+- Fix popup links to open in separate new tabs.
+
 ## [1.0.21] - 2026-09-28
 ### Changed
 - Update package dependencies. [#52297]
