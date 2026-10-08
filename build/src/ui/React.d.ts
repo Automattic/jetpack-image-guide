@@ -1,4 +1,3 @@
-import { type TracksCallback } from '../analytics.ts';
 import { MeasurableImageStore } from '../stores/MeasurableImageStore.ts';
 import type { GuideSize } from '../types.ts';
 import './style.scss';
@@ -12,9 +11,8 @@ export declare function JetpackLogo({ size, bg }: {
     size?: number;
     bg?: string;
 }): import("react").JSX.Element;
-export declare function AdminBarToggle({ href, tracksCallback, }: {
+export declare function AdminBarToggle({ href }: {
     href: string;
-    tracksCallback: TracksCallback;
 }): import("react").JSX.Element;
 export declare function Bubble({ index, store, onHover, intro, }: {
     index: number;
