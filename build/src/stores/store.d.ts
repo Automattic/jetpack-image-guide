@@ -18,7 +18,6 @@ type State = {
         id?: string;
         revision: number;
     };
-    revisions: Record<string, Partial<Record<keyof ImageFacts, number>>>;
 };
 declare const actions: {
     setGuideState: (value: GuideState) => {
@@ -65,7 +64,6 @@ export declare const store: import("@wordpress/data").StoreDescriptor<import("@w
         id?: string;
         revision: number;
     };
-    getImageRevision: (state: State, id: string, key: keyof ImageFacts) => number;
     getExpectedSize: ((state: State, id: string) => {
         width: number;
         height: number;
@@ -78,7 +76,6 @@ export declare const selectors: {
     getGuideLabel: () => string;
     getImageFacts: (id: string) => ImageFacts;
     getImageChange: () => State['imageChange'];
-    getImageRevision: (id: string, key: keyof ImageFacts) => number;
     getExpectedSize: (id: string) => Dimensions;
     getOversizedRatio: (id: string) => number;
     getPotentialSavings: (id: string) => number | null;
